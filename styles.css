@@ -6,12 +6,17 @@
     <style>
         body {
             margin: 0;
+            overflow: hidden;
             padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f0f0f0; /* Optional: Set a background color for the body */
+            background-color: #f0f0f0;
+            .animated-background {
+            background: url('your-animation-file.mp4') center center fixed;
+            background-size: cover;
+   
         }
 
         .carousel-container {
