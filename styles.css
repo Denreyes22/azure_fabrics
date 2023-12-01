@@ -31,12 +31,13 @@
             width: 100%;
             object-fit: cover; /* Ensure the image covers the entire container */
         }
- font-family: 'Lobster', cursive;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #FFF; /* Set the background color to black */
-    color: #000; /* Set the text color to black */
+
+       font-family: 'Lobster', cursive;
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       background-color: #FFF; /* Set the background color to black */
+       color: #000; /* Set the text color to black */
 }
 
 .container {
