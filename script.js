@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
 
+   
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -14,4 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optionally, you can reset the form after submission
         contactForm.reset();
     });
+
+    // Scroll animation logic
+    const animatedElement = document.querySelector('.animated-element');
+
+    const observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animatedElement.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(animatedElement);
 });
