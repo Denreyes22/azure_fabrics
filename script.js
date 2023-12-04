@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
 
-   
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -16,17 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
         contactForm.reset();
     });
 
-    // Scroll animation logic
-    const animatedElement = document.querySelector('.animated-element');
+    // Scroll animation logic for elements with the class 'animated-element'
+    const animatedElements = document.querySelectorAll('.animated-element');
 
     const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animatedElement.classList.add('animated');
+                entry.target.classList.add('animated');
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
 
-    observer.observe(animatedElement);
+    animatedElements.forEach(element => observer.observe(element));
 });
+
