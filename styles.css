@@ -40,6 +40,19 @@
 .animated-element {
     animation: fadeIn 0.5s ease;
 }
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.blink-animation {
+    animation: blink 2s infinite; /* Adjust the duration as needed */
+}
         .carousel-container {
             width: 80%; /* Adjust the width of your carousel container as needed */
             max-width: 600px; /* Set a max-width to ensure it doesn't get too wide on larger screens */
