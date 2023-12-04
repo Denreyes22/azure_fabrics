@@ -26,6 +26,20 @@
         transform: translateY(0);
         }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-element {
+    animation: fadeIn 0.5s ease;
+}
         .carousel-container {
             width: 80%; /* Adjust the width of your carousel container as needed */
             max-width: 600px; /* Set a max-width to ensure it doesn't get too wide on larger screens */
