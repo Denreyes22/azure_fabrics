@@ -21,6 +21,12 @@
            transform: translateY(20px);
            transition: opacity 0.5s ease, transform 0.5s ease;
         }
+
+       .animated-element.animated {
+        opacity: 1;
+        transform: translateY(0);
+        }
+
         .carousel-container {
             width: 80%; /* Adjust the width of your carousel container as needed */
             max-width: 600px; /* Set a max-width to ensure it doesn't get too wide on larger screens */
