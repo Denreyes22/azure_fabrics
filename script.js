@@ -30,3 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
     animatedElements.forEach(element => observer.observe(element));
 });
 
+document.addEventListener('scroll', function () {
+    const animatedElement = document.querySelector('.animated-element');
+    const scrollPosition = window.scrollY;
+    const elementOffset = animatedElement.offsetTop;
+
+    if (scrollPosition > elementOffset - window.innerHeight * 0.5) {
+        animatedElement.classList.add('animated');
+    }
+});
+
